@@ -13,7 +13,10 @@ const { BASE_DIR } = constants;
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
-    entry: './src/index.ts',
+    entry: {
+        'js/bundle.js': `${SRC}/index.ts`,
+        'js/style.css': `${SRC}/style.scss`,
+    },
     output: {
         path: path.resolve(__dirname, DEST + BASE_DIR ),
         filename: 'js/bundle.js',
@@ -34,7 +37,27 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-        ],
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 2,
+                            }
+                        },
+                        'postcss-loader',
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                includePaths: [ `${SRC}/scss` ],
+                            },
+                        }
+                    ]
+                }),
+            },
+        ]
     },
     resolve: {
        extensions: [ '.tsx', '.ts', '.js' ], 
