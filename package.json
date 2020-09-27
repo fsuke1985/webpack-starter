@@ -1,0 +1,26 @@
+{
+  "name": "io3000",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.161",
+    "css-loader": "^4.3.0",
+    "path": "^0.12.7",
+    "read-config": "^2.0.0",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
