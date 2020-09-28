@@ -1,0 +1,14 @@
+$body-color: red;
+
+html {
+    font-size: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+html, button, input, select, textarea {
+    font-family: 'Noto Serif JP','游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
+    letter-spacing: 1px;
+}
+body {
+    display: block;
+}

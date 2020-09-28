@@ -15,11 +15,11 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: {
         'js/bundle.js': `${SRC}/index.ts`,
-        'js/style.css': `${SRC}/style.scss`,
+        'css/style.css': `${SRC}/scss/style.scss`,
     },
     output: {
         path: path.resolve(__dirname, DEST + BASE_DIR ),
-        filename: 'js/bundle.js',
+        filename: '[name]',
         publicPath: BASE_DIR,
     },
     devServer: {
@@ -38,26 +38,14 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                importLoaders: 2,
-                            }
-                        },
-                        'postcss-loader',
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                includePaths: [ `${SRC}/scss` ],
-                            },
-                        }
-                    ]
-                }),
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
             },
-        ]
+        ],
     },
     resolve: {
        extensions: [ '.tsx', '.ts', '.js' ], 
