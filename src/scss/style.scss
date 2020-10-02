@@ -1,3 +1,6 @@
+@import "assets";
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;800&display=swap');
+
 $body-color: red;
 
 html {
@@ -11,4 +14,8 @@ html, button, input, select, textarea {
 }
 body {
     display: block;
+    color: #141421;
+    line-height: 1.5;
+    margin: 0;
+
 }

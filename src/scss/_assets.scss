@@ -1,0 +1,34 @@
+.home {
+    font-weight: bolder;
+}
+.site-main {
+    padding: 0 2%;
+    position: relative;
+}
+.home .site-header {
+
+    .home-link {
+        color: #141421;
+        display: block;
+        margin: 0 auto;
+        max-width: 96%;
+        min-height: 1px;
+        padding: 0;
+        text-decoration: none;
+        width: 100%;
+    }
+        .site-title {
+            font-family: 'Vollkorn', serif;
+            font-weight: 700;
+            font-style: normal;
+            padding: 20% 0 10px;
+            margin: 0;
+        }
+        .site-description {
+            margin: 0;
+            font-style: normal;
+            font-family: 'Noto Serif JP','游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'ＭＳ Ｐ明朝', serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+}
