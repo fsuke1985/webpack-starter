@@ -34,11 +34,13 @@ module.exports = {
         rules: [
             {
                 test: /\.css/,
-                loaders: [
+                use: [
                     'style-loader',
                     {
                         loader: 'css-loader',
-                        options: {url: false}
+                        options: {
+                            url: false
+                        }
                     }
                 ]
             },
