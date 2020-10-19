@@ -45,6 +45,14 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(gif|png|jpe?g|svg|eot|wof|woff|woff2|ttf)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                    }
+                ]
+            },
+            {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
